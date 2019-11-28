@@ -10,7 +10,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 
-public class ConwayGoL {
+public class ConwayGOL {
     
     public static void main (String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
