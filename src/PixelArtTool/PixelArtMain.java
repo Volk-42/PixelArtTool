@@ -1,14 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package PixelArtTool;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-/**
- *
- * @author 01126559
- */
 public class PixelArtMain {
-    
+    final private static PixelArtFrame PIXELART_FRAME = new PixelArtFrame();
+    final private static Thread PIXELART_THREAD = new Thread(PIXELART_FRAME);
+    public static void main(String[] args) {
+        PIXELART_THREAD.start();
+    }
 }
