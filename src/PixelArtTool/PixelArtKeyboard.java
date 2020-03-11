@@ -20,8 +20,8 @@ public class PixelArtKeyboard implements KeyListener {
         pixelGrid = new boolean[272][152];
         spriteCoordinates = "{";
         stateChange = true;
-        savedGrid = PixelSaves.building1;
-        loadSave = false;
+        savedGrid = PixelSaves.CAR; //select sprite to load
+        loadSave = true; //set to true to load sprites
         if(loadSave) {
             for(int i = 0; i < savedGrid.length; i++) {
                 int x = savedGrid[i][0];
