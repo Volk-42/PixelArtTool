@@ -17,10 +17,10 @@ public class PixelArtKeyboard implements KeyListener {
         cursorX = 0;
         cursorY = 0;
         cursorPos = new int[2];
-        pixelGrid = new boolean[29][18];
+        pixelGrid = new boolean[272][152];
         spriteCoordinates = "{";
         stateChange = true;
-        savedGrid = PixelSaves.shipAfterBurn1;
+        savedGrid = PixelSaves.building2;
         loadSave = true;
         if(loadSave) {
             for(int i = 0; i < savedGrid.length; i++) {
@@ -36,7 +36,7 @@ public class PixelArtKeyboard implements KeyListener {
         int key = e.getKeyCode();
         switch(key) {
             case KeyEvent.VK_RIGHT:
-                if (cursorX < 28) {
+                if (cursorX < 272) {
                     cursorX++;
                     stateChange = true;
                 }
@@ -48,7 +48,7 @@ public class PixelArtKeyboard implements KeyListener {
                 }
                 break;
             case KeyEvent.VK_DOWN:
-                if(cursorY < 17) {
+                if(cursorY < 152) {
                     cursorY++;
                     stateChange = true;
                 }

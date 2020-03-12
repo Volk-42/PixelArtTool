@@ -8,7 +8,7 @@ public class PixelArtFrame implements Runnable {
     PixelArtFrame() {
         JFrame f = new JFrame();
         f.setSize(605,405);
-        f.setResizable(false);
+        f.setResizable(true);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         keyboard = new PixelArtKeyboard();
         p = new PixelArtPanel(keyboard);

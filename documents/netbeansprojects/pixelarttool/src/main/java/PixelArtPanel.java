@@ -9,7 +9,7 @@ public class PixelArtPanel extends JPanel{
     private int cursorY;
     private PixelArtKeyboard keyboard;
     PixelArtPanel(PixelArtKeyboard keyboard) {
-        pixelGrid = new boolean[29][18];
+        pixelGrid = new boolean[272][152];
         cursor = new int[2];
         cursorX = 0;
         cursorY = 0;
@@ -35,14 +35,14 @@ public class PixelArtPanel extends JPanel{
         for (int x = 0; x < pixelGrid.length; x++) {
             for (int y = 0; y < pixelGrid[x].length; y++) {
                 if (pixelGrid[x][y]) {
-                    g.fillRect(x*20+5, y*20+5, 20, 20);
+                    g.fillRect(x*5, y*5, 5, 5);
                 }
                 else {
-                    g.drawRect(x*20+5, y*20+5, 20, 20);
+                    g.drawRect(x*5, y*5, 5, 5);
                 }
             }
         }
         g.setColor(Color.yellow);
-        g.fillRect(cursorX*20+7, cursorY*20+7, 15, 15);
+        g.fillRect(cursorX*5, cursorY*5, 5, 5);
     }
 }
