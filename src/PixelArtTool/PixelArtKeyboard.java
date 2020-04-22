@@ -67,15 +67,21 @@ public class PixelArtKeyboard implements KeyListener {
                 for (int y = 0; y < pixelGrid.length; y++) {
                     for (int x = 0; x < pixelGrid[y].length; x++) {
                         if(pixelGrid[y][x]) {
-                            spriteCoordinates += "{";
                             spriteCoordinates += y;
                             spriteCoordinates += ",";
                             spriteCoordinates += x;
-                            spriteCoordinates += "},";
+                            spriteCoordinates += ",";
                         }
                     }
                 }
-                spriteCoordinates += "}";
+                try {
+                    FileWriter fw = new FileWriter("coordinates.csv");
+                    fw.write(spriteCoordinates);
+                    fw.close();
+                }
+                catch(IOException exception) {
+                    System.out.println(exception);
+                }
                 System.out.println(spriteCoordinates);
                 break;
         }
